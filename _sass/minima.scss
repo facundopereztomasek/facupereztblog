@@ -31,10 +31,10 @@ $grey-color-dark:  darken($grey-color, 25%) !default;
 $table-text-align: left !default;
 
 // Width of the content area
-$content-width:    800px !default;
+$content-width:    1300px !default;
 
 $on-palm:          600px !default;
-$on-laptop:        800px !default;
+$on-laptop:        1300px !default;
 
 // Use media queries like this:
 // @include media-query($on-palm) {
@@ -43,6 +43,23 @@ $on-laptop:        800px !default;
 //     padding-left: $spacing-unit / 2;
 //   }
 // }
+
+@mixin clearfix() {
+
+  &:before,
+  &:after {
+    content: " ";
+    display: table;
+  }
+
+  &:after {
+    clear: both;
+    display: block;
+    height: 1px;
+    margin-top: -1px;
+    visibility: hidden;
+  }
+}
 
 @mixin nunito {
   font-family: "Nunito Sans", Arial, Helvetica, sans-serif;
