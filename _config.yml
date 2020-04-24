@@ -24,11 +24,10 @@ author: Facundo Pérez Tomasek
 avatar: https://avatars.githubusercontent.com/facundopereztomasek
 description: >- # this means to ignore newlines until "baseurl:"
   Cosas que hago y no se que hacer con ellas
-baseurl: "" # the subpath of your site, e.g. /blog
+baseurl: "/facupereztblog" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username:
 github_username:  https://github.com/facundopereztomasek
-root: /facupereztblog
 
 # Build settings
 theme: minima
