@@ -1,8 +1,15 @@
 @charset "utf-8";
 
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;800&family=Nunito+Sans:ital,wght@0,300;0,400;0,600;0,800;1,300;1,400&display=swap');
+
+$white: #fefefe;
+$black: #111111;
+$blue: #4389A2;
+$purple: #5C258D;
+$grey: #828282;
 // Define defaults for each variable.
 
-$base-font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !default;
+$base-font-family: "Nunito Sans", Arial, Helvetica, sans-serif !default;
 $base-font-size:   16px !default;
 $base-font-weight: 400 !default;
 $small-font-size:  $base-font-size * 0.875 !default;
@@ -10,11 +17,14 @@ $base-line-height: 1.5 !default;
 
 $spacing-unit:     30px !default;
 
-$text-color:       #111 !default;
-$background-color: #fdfdfd !default;
-$brand-color:      #2a7ae2 !default;
 
-$grey-color:       #828282 !default;
+$primary-color:    $blue !default;
+$secondary-color:  $purple !default;
+$text-color:       $black !default;
+$background-color: $white !default;
+$brand-color:      $blue !default;
+
+$grey-color:       $grey !default;
 $grey-color-light: lighten($grey-color, 40%) !default;
 $grey-color-dark:  darken($grey-color, 25%) !default;
 
@@ -33,6 +43,36 @@ $on-laptop:        800px !default;
 //     padding-left: $spacing-unit / 2;
 //   }
 // }
+
+@mixin nunito {
+  font-family: "Nunito Sans", Arial, Helvetica, sans-serif;
+}
+
+@mixin montserrat {
+  font-family: "Montserrat", Arial, Helvetica, sans-serif;
+}
+
+@mixin shadow-bottom-1 {
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+}
+
+@mixin shadow-bottom-2 {
+  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+}
+
+@mixin shadow-bottom-3 {
+  box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+}
+
+@mixin shadow-bottom-4 {
+  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+}
+
+@mixin shadow-bottom-5 {
+  box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+}
+
 @mixin media-query($device) {
   @media screen and (max-width: $device) {
     @content;
@@ -49,3 +89,4 @@ $on-laptop:        800px !default;
   "minima/layout",
   "minima/syntax-highlighting"
 ;
+
